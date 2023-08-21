@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.posts{
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  border:  1px solid black;
+}
+
+article{
+  border: 1px solid red;
+}
