@@ -1,15 +1,27 @@
-// import { ReactDOM } from 'react';
+import React from "react";
+
 import './App.css';
-// import AddNewTask from './components/AddNewTask/AddNewTask';
+import Navbar from './components/Manu/Navbar';
 import ToDo from './pages/ToDoPage/ToDo';
+import About from '../src/pages/About/About';
+import PageNotFound from '../src/pages/PageNotFound'
+import {BrowserRouter as Router, Routes, Route,} from 'react-router-dom';
+
 
 
 function App() {
   
   return (
-    <div className='posts'>
-      <ToDo/>
-    </div>
+    <div className='tasks'>
+      <Router>
+      <Navbar/>
+        <Routes>
+          <Route path="/" element = {<ToDo/>}/>
+          <Route path="/about" element = {<About/>}></Route>
+          <Route path="/*" element = {<PageNotFound/>}></Route>
+        </Routes>
+      </Router>
+     </div>
   )
     
 }

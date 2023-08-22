@@ -7,6 +7,7 @@ export const apiSlice = createApi({
     baseQuery : fetchBaseQuery({
         baseUrl: 'http://localhost:3004'
     }),
+    tagTypes: ['Tasks'],
 
     endpoints: (builder) =>({
         getTasks: builder.query({
@@ -23,9 +24,34 @@ export const apiSlice = createApi({
                 },
             }),
             // invalidatesTags: ['tasks']
-        })
+        }),
+
+        deleteTask: builder.mutation({
+            query: (id) => ({
+                url: `/tasks/${id}`,
+                method: 'DELETE',
+
+            })
+        }),
+
+        editTask: builder.mutation({
+            query: (payload)=> ({
+                url: `/tasks/${payload.id}`,
+                method: 'PUT',
+                body: JSON.stringify(payload),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+            })
+        }),
+
+
     })
 })
 
 
-export const { useGetTasksQuery, useAddTaskMutation} = apiSlice
+export const { useGetTasksQuery, 
+                useAddTaskMutation, 
+                useDeleteTaskMutation,
+                useEditTaskMutation
+            } = apiSlice

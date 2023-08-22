@@ -1,133 +1,115 @@
-import { addNewTask } from "../../store/taskReducer";
-import { useAddTaskMutation, } from "../../store/api";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import './AddNewTask.css'
+import React, {useState, } from "react";
+import classes from './EditTask.module.css'
 import { Modal } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.css";
+import { useSelector, useDispatch } from "react-redux";
+import { editingTask, putEditedTaskOnList } from "../../store/taskReducer";
+import { useEditTaskMutation } from "../../store/api";
 
+export default function EditTaskModal(){
 
-
-
-export const AddNewTask = ({onClose})=>{
-
-    const [addNewTaskRequest] = useAddTaskMutation();
+    const [saveEditedTask] = useEditTaskMutation();
+    const editTaskData = useSelector((state) => state.taskReducer.editTask);
     const dispatch = useDispatch();
-    const[inputFields, setInputFields] = useState({
-        title: "",
-        description: "",
-        importance: "",
-        startDate: "",
-        endDate: "",
-        developer: "",
-    });
+    const [editedTask, setEditedTask] = useState(editTaskData);
 
-        
     const handleTitleValue = (event) => {
         const newFormData = {
-            ...inputFields,
+            ...editedTask,
             title: event.target.value
         };
-        setInputFields(newFormData) 
+        setEditedTask(newFormData) 
     }
-
-      
+    
     const handleDescriptionValue = (event) => {
         const newFormData = {
-            ...inputFields,
+            ...editedTask,
             description: event.target.value
         };
-        setInputFields(newFormData) 
+        setEditedTask(newFormData) 
     }
     
     const handleRadioChange = (event) => {
         const newFormData = {
-            ...inputFields,
+            ...editedTask,
             importance: event.target.value,
         };
-        setInputFields(newFormData);
+        setEditedTask(newFormData);
     }
 
     const handleSelectValueChange = (event) => {
+
+
         const newFormData = {
-            ...inputFields,
+            ...editedTask,
             developer: event.target.value,
         };
-        setInputFields(newFormData);
+        setEditedTask(newFormData);
     }
 
     const handleStartDate = (event) => {
         const newFormData = {
-            ...inputFields,
+            ...editedTask,
             startDate: event.target.value,
         };
-        setInputFields(newFormData);
+        setEditedTask(newFormData);
     }
 
     const handleEndDate = (event) => {
         const newFormData = {
-            ...inputFields,
+            ...editedTask,
             endDate: event.target.value,
         };
-        setInputFields(newFormData);
+        setEditedTask(newFormData);
     }
-      
-    function handleAddKeyDown (event){
-        if(event.key === "Enter"){
-            handleAddNewTask(event)
+
+    const handleSaveEditedTask = () =>{
+        // console.log(editedTask)
+        saveEditedTask(editedTask)
+        .then((res) => {
+            dispatch(putEditedTaskOnList(res));
+            dispatch(editingTask(null)); 
+        })
+    }
+
+    const handleAddKeyDown = (event) =>{
+        if(event.key === 'Enter'){
+            handleSaveEditedTask()
         }
     }
-
-    function handleAddNewTask(e){
-        e.preventDefault();
-
-        // if(!inputFields) return
-
-        addNewTaskRequest(inputFields)
-        .then(res => {
-            console.log(res)
-            if(res.error){
-                throw new Error ("some error" )
-            }
-            dispatch(addNewTask(res.data))
-        })
-        onClose()
-    }  
-
 
     return(
         <div>
             <Modal 
                 size="md"
                 show = {true}
-                onHide={onClose}            
+                onHide={() => dispatch(editingTask(null))}            
             >
             
             <form 
-                className="Form" 
+                className={classes.Form} 
                 onKeyDown={handleAddKeyDown} 
                 >
                 <label htmlFor="title"><h4>Title</h4></label>
                 <input 
-                    className='formTitle'
+                    className={classes.formTitle}
                     type="text"
                     id="title"
-                    value={inputFields.title}
+                    value={editedTask.title}
                     placeholder="Task name..."
                     onChange={handleTitleValue} />
                             
                 <label htmlFor="description"><h4>Description</h4></label>
                 <input
-                    className='description'
+                    className={classes.description}
                     as="textarea"
                     id="description"
-                    value={inputFields.description}
+                    value={editedTask.description}
                     placeholder="Describe task..."
                     autoComplete="off"
                     onChange={handleDescriptionValue}
                 /> 
                 <label><h4>Choose importance </h4></label>
-                <div className='importance'>
+                <div className={classes.importance}>
                     <div>
                         <label htmlFor="high"> High </label>
                         <input
@@ -135,7 +117,7 @@ export const AddNewTask = ({onClose})=>{
                             value="High"
                             name="importance"
                             type="radio"
-                            checked={inputFields.importance === 'High'}
+                            checked={editedTask.importance === 'High'}
                             onChange={handleRadioChange}
                         />
                     </div>
@@ -146,7 +128,7 @@ export const AddNewTask = ({onClose})=>{
                             value="Medium"
                             name="importance"
                             type="radio"
-                            checked={inputFields.importance === 'Medium'}
+                            checked={editedTask.importance === 'Medium'}
                             onChange={handleRadioChange}
                         />
                     </div>
@@ -157,20 +139,20 @@ export const AddNewTask = ({onClose})=>{
                             value="Low"
                             name="importance"
                             type="radio"
-                            checked={inputFields.importance === 'Low'}
+                            checked={editedTask.importance === 'Low'}
                             onChange={handleRadioChange}
                         />
                     </div>
                 </div>    
                 
                 <label ><h4>Choose duration</h4></label>
-                <div className='date'>
+                <div className={classes.date}>
                     <div>
                         <label htmlFor="startdate">Start Date</label>
                         <input
                             type="date"
                             id="startdate"
-                            value={inputFields.startDate}
+                            value={editedTask.startDate}
                             onChange={handleStartDate} />
                     </div>
                     <div>
@@ -178,7 +160,7 @@ export const AddNewTask = ({onClose})=>{
                         <input
                             type="date"
                             id="enddate"
-                            value={inputFields.endDate}
+                            value={editedTask.endDate}
                             onChange={handleEndDate} />
                     </div>
                 </div>
@@ -186,9 +168,9 @@ export const AddNewTask = ({onClose})=>{
                 <label htmlFor="developers"><h4>Choose a developer:</h4></label>
                 <select
                     name="developers"
-                    value={inputFields.developer}
+                    value={editedTask.developer}
                     onChange={handleSelectValueChange}
-                    className='developer'>
+                    className={classes.developer}>
                     <option value=''>Developer</option>
                     <option value="Dolera">Dolera</option>
                     <option value="Aksana">Aksana</option>
@@ -196,23 +178,21 @@ export const AddNewTask = ({onClose})=>{
                     <option value="Developer 4">Developer 4</option>
                     <option value="Developer 5">Developer 5</option>
                 </select>
-                <div className='footerBtns'>
+                <div className={classes.footerBtns}>
                     <button
-                        onClick={handleAddNewTask} 
+                        onClick={handleSaveEditedTask} 
                         // disabled={props.disabledButton}
-                        >Add Task
+                        > Save changes
                     </button>
                     <button
-                        onClick={onClose}
+                        // onClick={onClose}
                         // disabled={props.disabledButton}
-                        >Close</button>
+                        > Cancel
+                    </button>
                 </div>
             </form>
             {/* </div> */}
         </Modal>
     </div>
     )
-    
 }
-
-export default AddNewTask

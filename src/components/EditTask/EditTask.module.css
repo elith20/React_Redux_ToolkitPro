@@ -6,7 +6,9 @@
   
   
   @media only screen and (max-width: 767px) {
-  
+  .Modal{
+    width: 50%;
+  }
   .Form{
     width: 98%;
     margin: 0 auto;
@@ -15,24 +17,22 @@
     border: 2px ridge #3D9A8B;
     border-radius: 10px;
     padding: 10px 20px;
-    background-color: #37c0ae;
+    background-color: #daec8a;
     box-sizing: border-box;
-
   }
   
   label> h4{
     font-size: 20px;
-    background-color: #37c0ae;
     
   }
   
   label, label>*{
-    background-color: #37c0ae;
+    background-color: #daec8a;
     text-align: center;
   }
   
   input, select{
-    background-color: #37c0ae;
+    background-color: #daec8a;
     color:#123d5f;
     border-radius: 10px;
   }
@@ -60,12 +60,12 @@
     padding: 5px 10px;
     margin-bottom: 5px;
     box-sizing: border-box;
-    background-color: #37c0ae;
+    background-color: #daec8a;
   }
     
   .importance>div, .importance>div>label{
     margin-right: 15px;
-    background-color: #37c0ae;
+    background-color: #daec8a;
   }
   
   .date{
@@ -75,7 +75,7 @@
     padding: 5px 0px;
     box-sizing: border-box;
     margin-bottom: 10px;
-    background-color: #37c0ae;
+    background-color: #daec8a;
   }
   
   .date>div{
@@ -83,7 +83,7 @@
     display: flex;
     justify-content: center;
     border: 1px solid #3D9A8B;
-    background-color: #37c0ae;
+    background-color: #daec8a;
     border-radius: 10px;
     padding: 2px 5px;
     margin: 5px;
@@ -103,7 +103,7 @@
     width: 90px;
     border: 2px solid #3D9A8B;
     color: #123d5f;
-    background-color: #37c0ae;
+    background-color: #daec8a;
   }
   
   
@@ -133,15 +133,15 @@
     padding: 5px 0px;
     box-sizing: border-box;
     margin-bottom: 10px;
-    background-color: #37c0ae;
+    background-color: #daec8a;
   }
   
   .footerBtns>button{
     border-radius: 15px;
     width: 80px;
     border: 2px solid #3D9A8B;
-    color: #37c0ae;
-    background-color: #123d5f;
+    color: #123d5f;
+    background-color: #61bb4f;
     margin-top: 20px;
   }
   
@@ -149,14 +149,14 @@
   
   @media only screen and (min-width: 768px ) {
   .Form{
-    width: 98%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     border: 5px ridge #3D9A8B;
     border-radius: 10px;
     padding: 15px 25px;
-    background-color: #37c0ae;
+    background-color: #daec8a;
   }
   
   label>h4{
@@ -164,11 +164,11 @@
   }
   
   label, label>*{
-    background-color: #37c0ae;
+    background-color: #daec8a;
   }
   
   input, select{
-    background-color: #37c0ae;
+    background-color: #daec8a;
     color:#123d5f;
     border-radius: 10px;
   }
@@ -196,13 +196,13 @@
       padding: 5px 10px;
       margin-bottom: 5px;
       box-sizing: border-box;
-      background-color: #37c0ae;
+      background-color: #daec8a;
   
   }
   
   .importance>div, .importance>div>label{
     margin-right: 20px;
-    background-color: #37c0ae;
+    background-color: #daec8a;
     
   }
   
@@ -213,13 +213,13 @@
     padding: 5px 0px;
     box-sizing: border-box;
     margin-bottom: 10px;
-    background-color: #37c0ae;
+    background-color: #daec8a;
   }
   
   .date>div{
     display: flex;
     justify-content: center;
-    background-color: #37c0ae;
+    background-color: #daec8a;
   
   }
   
@@ -237,7 +237,7 @@
     width: 100px;
     border: 2px solid #3D9A8B;
     color: #123d5f;
-    background-color: #37c0ae;
+    background-color: #daec8a;
   }
   
   
@@ -245,7 +245,7 @@
     width: 110px;
     border: 2px solid #3D9A8B;
     color: #66dbf9;
-    background-color: #37c0ae;
+    background-color: #daec8a;
     transition: 0.5s;
   }
   
@@ -267,15 +267,15 @@
     padding: 5px 0px;
     box-sizing: border-box;
     margin: 20px 0;
-    background-color: #37c0ae;
+    background-color: #daec8a;
   }
   
   .footerBtns>button{
     border-radius: 15px;
     width: 100px;
     border: 2px solid #3D9A8B;
-    color: #37c0ae;
-    background-color: #123d5f;
+    color: #123d5f;
+    background-color: #61bb4f;
   }
   
   }
@@ -290,21 +290,21 @@
       border: 5px ridge #3D9A8B;
       border-radius: 10px;
       padding: 15px 25px;
-      background-color: #37c0ae;
+      background-color: #daec8a;
       /* color: #3D9A8B; */
     }
 
     .Form, .Form > *{
-      background-color: #37c0ae;
+      background-color: #daec8a;
     }
-
+    
     label, label>*{
-      background-color: #37c0ae;
+      background-color: #daec8a;
       text-align: left;
     }
     
     input, select{
-      background-color: #37c0ae;
+      background-color: #daec8a;
       color:#123d5f;
       border-radius: 10px;
     }
@@ -332,13 +332,13 @@
         padding: 5px 10px;
         margin-bottom: 5px;
         box-sizing: border-box;
-        background-color: #37c0ae;
+        background-color: #daec8a;
     
     }
     
     .importance>div, .importance>div>label{
       margin-right: 20px;
-      background-color: #37c0ae;
+      background-color: #daec8a;
       
     }
     
@@ -349,13 +349,19 @@
       padding: 5px 0px;
       box-sizing: border-box;
       margin-bottom: 10px;
-      background-color: #37c0ae;
+      background-color: #daec8a;
+    }
+
+    .date > div{
+      background-color: #daec8a;
+
     }
   
     .date>div>input{
       width: 60%;
       border: 1px solid #3D9A8B;
       padding: 2px 5px;
+
     }
     
     .addButton{
@@ -365,7 +371,7 @@
       width: 100px;
       border: 2px solid #3D9A8B;
       color: #123d5f;
-      background-color: #37c0ae;
+      background-color: #daec8a;
     }
     
     
@@ -373,11 +379,18 @@
       width: 110px;
       border: 2px solid #3D9A8B;
       color: #66dbf9;
-      background-color: #37c0ae;
+      background-color: #daec8a;
       transition: 0.5s;
     }
     
-   .developer{
+    .newtask{
+      display: flex;
+      justify-content: center;
+      align-items:center;
+      background-color: #daec8a;
+    }
+    
+    .developer{
       border: 1px solid #3D9A8B;
       padding: 5px 10px;
     }
@@ -388,7 +401,7 @@
       padding: 5px 0px;
       box-sizing: border-box;
       margin-bottom: 10px;
-      background-color: #37c0ae;
+      background-color: #daec8a;
     }
     
     .footerBtns>button{
@@ -396,8 +409,8 @@
       width: 110px;
       padding: 5px 0;
       border: 2px solid #3D9A8B;
-      color: #37c0ae;
-      background-color: #123d5f;
+      color: #123d5f;
+      background-color: #61bb4f;
     }
     
     }

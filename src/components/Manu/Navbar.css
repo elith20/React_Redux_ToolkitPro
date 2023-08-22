@@ -1,0 +1,28 @@
+body{
+    background-color: #7f6f65;
+    }
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: #9fcf97;
+}
+
+.manu div{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.menu>*{
+    padding: 10px ;
+    margin: 10px;
+    border-radius: 5px;
+    width: 170px;
+    border: 2px solid #3D9A8B;
+    color: #123d5f;
+    background-color: #daec8a;
+    text-decoration: none;
+    text-align: center;
+}

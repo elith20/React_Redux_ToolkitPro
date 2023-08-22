@@ -1,9 +1,22 @@
 import React from "react";
 import classes from './Tasks.module.css'
 import { useState } from "react";
+import { useDeleteTaskMutation, useEditTaskMutation } from "../../store/api";
+import { useDispatch, useSelector } from "react-redux";
+import { removeSingleTask, editingTask } from "../../store/taskReducer";
 
-export default function Tasks(props){
-    const {item } = props
+export default function Tasks({item}){
+    // const {item } = props;
+    
+    const dispatch = useDispatch();
+    const [ deleteTask, response ] = useDeleteTaskMutation();
+
+    const handleDeleteTask = (id) => {
+        deleteTask(id)
+        .then((res)=>{
+            dispatch(removeSingleTask(id))
+        })
+    }
 
 
     return(
@@ -40,13 +53,13 @@ export default function Tasks(props){
         <div className={classes.btn}>
             <button
                 className={classes.cardBtn}
-                // onClick={() => handleEditTask(item.id)}
+                onClick={() => dispatch(editingTask(item))}
                 // disabled={disabledButton}
                 >Edit Task
             </button>
             <button
                 className={classes.cardBtn}
-                // onClick={() => handleRemoveSingleTask(item.id)}
+                onClick={() => handleDeleteTask(item.id)}
                 // disabled={disabledButton}
                 >Delete Task
             </button>
