@@ -1,6 +1,6 @@
 .card{
     width: 300px;
-    height: 470px;
+    height: 490px;
     display: inline-block;
     background-color: #4a996b;
     color: #c2ecf7;
@@ -28,6 +28,7 @@
 }
 
 .CardTitle{
+    overflow-x: auto;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 20px;

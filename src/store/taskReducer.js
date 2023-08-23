@@ -4,6 +4,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     toDoList : [],
     editTask : null,
+    successMessage: '',
+    errorMessage: '',
+    editedMessage: '',
 
 }
 const taskSlice = createSlice({
@@ -11,20 +14,20 @@ const taskSlice = createSlice({
     initialState,
     reducers: {
         getAllTasks(state, action){
-            state.toDoList = action.payload
+            state.toDoList = [...action.payload]
         },
 
         addNewTask(state, action){
             state.toDoList = [
-                state.toDoList,
-                action.payload
+                action.payload,
+                state.toDoList
             ]
         },
 
         removeSingleTask(state, action){
-            state.toDoList = [
-                ...state.toDoList.filter((task)=> task.id !== action.payload.id )
-            ]
+            state.toDoList =
+                [...state.toDoList].filter((task)=> action.payload.id !== task.id )
+            
         },
 
         editingTask(state, action){
@@ -35,15 +38,30 @@ const taskSlice = createSlice({
             let index = state.toDoList.findIndex((item) => item.id === action.payload.data.id);
             state.toDoList[index] = action.payload.data;
         },
+
+        setSuccessMessage(state, action){
+            state.successMessage = action.payload
+        },
+
+        setErroMessage(state, action){
+            state.errorMessage = action.payload
+        },
+        
+        setEditedMessage(state, action){
+            state.editedMessage = action.payload
+        },
     }
 })
 
 export const {
-            getAllTasks, 
-            addNewTask, 
-            removeSingleTask,
-            editingTask,
-            putEditedTaskOnList,
+                getAllTasks, 
+                addNewTask, 
+                removeSingleTask,
+                editingTask,
+                putEditedTaskOnList,
+                setEditedMessage,
+                setSuccessMessage, 
+                setErrorMessage
 
             } = taskSlice.actions
             

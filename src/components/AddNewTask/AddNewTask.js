@@ -1,4 +1,4 @@
-import { addNewTask } from "../../store/taskReducer";
+import { addNewTask, setErrorMessage, setSuccessMessage } from "../../store/taskReducer";
 import { useAddTaskMutation, } from "../../store/api";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
@@ -85,13 +85,15 @@ export const AddNewTask = ({onClose})=>{
 
         addNewTaskRequest(inputFields)
         .then(res => {
-            console.log(res)
             if(res.error){
-                throw new Error ("some error" )
-            }
-            dispatch(addNewTask(res.data))
+                throw new Error ("Error!!!" )};
+            dispatch(addNewTask(res.data));
+            dispatch(setSuccessMessage('New task succesfully added!'))
+            onClose()
         })
-        onClose()
+        .catch((error)=>{
+            dispatch(setErrorMessage('Task did not added!'))
+        })
     }  
 
 

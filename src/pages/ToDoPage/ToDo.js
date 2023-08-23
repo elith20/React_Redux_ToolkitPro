@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllTasks } from "../../store/taskReducer";
 import { useEffect, useState} from "react";
 import { useGetTasksQuery } from "../../store/api";
-// import EditModalFunc from "../../components/EditTask/EditModalFunc";
 
 
 export default function ToDo(){
@@ -42,11 +41,11 @@ export default function ToDo(){
                 />}
             </div>
             <div style={{display: 'flex', flexWrap: 'wrap'}}>
-                {taskData.length && taskData.map((item) => {
+                {taskData?.map((task) => {
                     return (
-                        <div key={item.id}>
+                        <div key={task.id}>
                             <Tasks
-                                item={item}
+                                item={task}
                             />
                         </div>
                         )

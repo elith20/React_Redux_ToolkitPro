@@ -11,7 +11,8 @@ export const apiSlice = createApi({
 
     endpoints: (builder) =>({
         getTasks: builder.query({
-            query: () => '/tasks'
+            query: () => '/tasks',
+            providesTags: ['Task'],
         }),
 
         addTask: builder.mutation({
@@ -23,7 +24,7 @@ export const apiSlice = createApi({
                     'Content-type': 'application/json; charset=UTF-8',
                 },
             }),
-            // invalidatesTags: ['tasks']
+            invalidatesTags: ['Tasks']
         }),
 
         deleteTask: builder.mutation({
@@ -31,7 +32,9 @@ export const apiSlice = createApi({
                 url: `/tasks/${id}`,
                 method: 'DELETE',
 
-            })
+            }),
+            invalidatesTags: ['Task'],
+
         }),
 
         editTask: builder.mutation({
@@ -42,7 +45,9 @@ export const apiSlice = createApi({
                 headers: {
                     'Content-type': 'application/json; charset=UTF-8',
                 },
-            })
+            }),
+            invalidatesTags: ['Task'],
+
         }),
 
 

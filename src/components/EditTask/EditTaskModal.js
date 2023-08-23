@@ -4,6 +4,7 @@ import { Modal } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { editingTask, putEditedTaskOnList } from "../../store/taskReducer";
 import { useEditTaskMutation } from "../../store/api";
+import { setEditedMessage, setErrorMessage } from "../../store/taskReducer";
 
 export default function EditTaskModal(){
 
@@ -68,6 +69,10 @@ export default function EditTaskModal(){
         .then((res) => {
             dispatch(putEditedTaskOnList(res));
             dispatch(editingTask(null)); 
+            dispatch(setEditedMessage("Task's data succsefully updated!"))
+        })
+        .catch((error)=>{
+            dispatch(setErrorMessage('Not updates...'))
         })
     }
 

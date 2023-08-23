@@ -9,7 +9,8 @@ export default function Tasks({item}){
     // const {item } = props;
     
     const dispatch = useDispatch();
-    const [ deleteTask, response ] = useDeleteTaskMutation();
+    const [ deleteTask ] = useDeleteTaskMutation();
+    
 
     const handleDeleteTask = (id) => {
         deleteTask(id)

@@ -6,6 +6,7 @@ import ToDo from './pages/ToDoPage/ToDo';
 import About from '../src/pages/About/About';
 import PageNotFound from '../src/pages/PageNotFound'
 import {BrowserRouter as Router, Routes, Route,} from 'react-router-dom';
+import Tostify from "./components/Tostify/Tostify";
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/*" element = {<PageNotFound/>}></Route>
         </Routes>
       </Router>
+      {/* <Tostify/> */}
      </div>
   )
     
