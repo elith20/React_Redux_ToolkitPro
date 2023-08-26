@@ -54,7 +54,7 @@ export default function Tasks({item}){
         <div className={classes.btn}>
             <button
                 className={classes.cardBtn}
-                onClick={() => dispatch(editingTask(item))}
+                onClick={()=> dispatch(editingTask(item))}
                 // disabled={disabledButton}
                 >Edit Task
             </button>

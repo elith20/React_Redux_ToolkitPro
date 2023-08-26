@@ -7,26 +7,27 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 export default function Tostify() {
-    const errorMessage = useSelector((state)=> state.taskReduser.errorMessage);
-    const successMessage = useSelector((state)=> state.taskReduser.successMessage);
-    const editedMessage = useSelector((state)=> state.taskReduser.editedMessage)
+    const coution = useSelector((state)=> state.taskReducer.errorMessage);
+    const succeed = useSelector((state)=> state.taskReducer.successMessage);
+    const edited = useSelector((state)=> state.taskReducer.editedMessage)
+
 
     useEffect (()=>{
-        if(errorMessage){
-            toast.error(errorMessage)
+        if(coution){
+            toast.error(coution)
         }
-        if(successMessage){
-            toast.success(successMessage)
+        if(succeed){
+            toast.success(succeed)
         }
-        if(editedMessage){
-            toast.success(editedMessage)
+        if(edited){
+            toast.success(edited)
         }
-    }, [errorMessage, successMessage, editedMessage])
+    }, [coution, succeed, edited])
 
     return (
         <ToastContainer
             position="top-center"
-            autoClose={5000}
+            autoClose={2000}
             hideProgressBar={false}
             newestOnTop={false}
             closeOnClick

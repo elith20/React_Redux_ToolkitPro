@@ -39,7 +39,6 @@ export default function EditTaskModal(){
 
     const handleSelectValueChange = (event) => {
 
-
         const newFormData = {
             ...editedTask,
             developer: event.target.value,
@@ -63,7 +62,8 @@ export default function EditTaskModal(){
         setEditedTask(newFormData);
     }
 
-    const handleSaveEditedTask = () =>{
+    const handleSaveEditedTask = (e) =>{
+        e.preventDefault()
         // console.log(editedTask)
         saveEditedTask(editedTask)
         .then((res) => {

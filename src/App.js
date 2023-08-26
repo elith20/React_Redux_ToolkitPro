@@ -22,7 +22,7 @@ function App() {
           <Route path="/*" element = {<PageNotFound/>}></Route>
         </Routes>
       </Router>
-      {/* <Tostify/> */}
+      <Tostify/>
      </div>
   )
     

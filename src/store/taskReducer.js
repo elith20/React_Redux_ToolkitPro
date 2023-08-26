@@ -4,9 +4,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     toDoList : [],
     editTask : null,
-    successMessage: '',
-    errorMessage: '',
-    editedMessage: '',
+    successMessage: null,
+    errorMessage: null,
+    editedMessage: null,
 
 }
 const taskSlice = createSlice({
@@ -43,7 +43,7 @@ const taskSlice = createSlice({
             state.successMessage = action.payload
         },
 
-        setErroMessage(state, action){
+        setErrorMessage(state, action){
             state.errorMessage = action.payload
         },
         
