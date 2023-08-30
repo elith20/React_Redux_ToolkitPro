@@ -20,7 +20,7 @@ const taskSlice = createSlice({
         addNewTask(state, action){
             state.toDoList = [
                 action.payload,
-                state.toDoList
+                ...state.toDoList
             ]
         },
 

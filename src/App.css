@@ -5,8 +5,9 @@
 .tasks{
   width: 100%;
   margin: auto;
-  /* border:  5px ridge #5da54b; */
   border-radius: 10px;
-  background-color: #9fcf97;
+  background-image:url(../src/images/green.png);
+  background-size: cover;
+  background-position: center;
   box-sizing: border-box;
 }

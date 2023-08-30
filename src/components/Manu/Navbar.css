@@ -1,28 +1,28 @@
 body{
     background-color: #7f6f65;
-    }
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f8d7d7;
+    height: 50px;
+}
 
 .menu{
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: #9fcf97;
+    background-color: #f8d7d7;
 }
 
-.manu div{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
-.menu>*{
-    padding: 10px ;
+a{
+    padding: 10px;
     margin: 10px;
-    border-radius: 5px;
     width: 170px;
-    border: 2px solid #3D9A8B;
-    color: #123d5f;
-    background-color: #daec8a;
-    text-decoration: none;
+    color: #344716 !important;
+    text-decoration: none !important;
     text-align: center;
+    font-size: 20px;
 }

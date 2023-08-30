@@ -27,11 +27,13 @@ export default function ToDo(){
         setShowNewTaskModal(!showNewTaskModal)
     }
 
+    console.log('TTT===>>>', taskData);
+
     return(
         <div >
             <button     
                 onClick={() => toggleModal()}
-                style={{width: '200px', height: '50px', marginLeft: '45%', backgroundColor: '#daec8a', borderRadius: '5px', border: '2px solid #3D9A8B'}}>
+                style={{width: '200px', height: '50px', marginLeft: '45%', backgroundColor: '#f8d7d7', borderRadius: '5px', border: '2px solid #3D9A8B'}}>
                 Add New Task
             </button>
             <div>

@@ -68,8 +68,8 @@ export default function EditTaskModal(){
         saveEditedTask(editedTask)
         .then((res) => {
             dispatch(putEditedTaskOnList(res));
-            dispatch(editingTask(null)); 
             dispatch(setEditedMessage("Task's data succsefully updated!"))
+            dispatch(editingTask(null)); 
         })
         .catch((error)=>{
             dispatch(setErrorMessage('Not updates...'))

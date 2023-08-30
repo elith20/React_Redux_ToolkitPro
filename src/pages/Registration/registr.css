@@ -1,0 +1,72 @@
+.registr{
+    background-image:url(../../images/back.jpg);
+    background-size:cover;
+    padding: 50px 0;
+}
+
+.main{
+    width: 40%;
+    margin: auto;
+    padding: 40px 80px;
+    background-color: #f8d7d7;
+    border-radius: 5%;
+}
+
+label{
+    background-color: transparent;
+}
+
+h2{
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+input{
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border: none;
+}
+
+.first_line{
+    display: flex;
+    justify-content: space-between;
+}
+
+.first_input{
+    display: inline-block;
+    width: 40%;
+}
+
+.second_input{
+    display: inline-block;
+    width: 40%;
+}
+
+#name, #mail{
+    width: 100%;
+}
+
+#password, #confpassword{
+    width: 100%;
+}
+
+#submit{
+    padding: 20px 40px;
+    background-color: #8eaba6;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.button{
+    width: 100%;
+    text-align: center;
+}
+
+.contact{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 40px;
+}

@@ -2,7 +2,7 @@
     width: 300px;
     height: 490px;
     display: inline-block;
-    background-color: #4a996b;
+    background-color: #f8d7d7;
     color: #c2ecf7;
     padding: 10px;
     box-sizing: border-box;
@@ -33,12 +33,12 @@
     text-align: center;
     margin-bottom: 20px;
     color: #123d5f;
-    background-color: #50a34d;
+    background-color: #f8d7d7;
 }
 
 p{
     display: inline-block;
-    background-color: #50a34d;
+    background-color: #f8d7d7;
     text-decoration: underline;
     font-style: italic;
     font-weight: bolder;
@@ -48,7 +48,7 @@ p{
 
 .items > *, .items{
     margin-bottom: 10px;
-    background-color: #50a34d;
+    background-color: #f8d7d7;
     color: #123d5f;
     border: none;
     border-radius: 5px;
@@ -57,7 +57,7 @@ p{
 .btn{
     display: flex;
     justify-content: space-around;
-    background-color: #4a996b;
+    background-color: #f8d7d7;
 }
 
 .cardBtn{
@@ -73,7 +73,7 @@ p{
     height: 100px;
     overflow: auto;
     padding: 3px 6px;
-    background-color: #50a34d;
+    background-color: #f8d7d7;
     border: 1px dotted #4a996b;
 }
 

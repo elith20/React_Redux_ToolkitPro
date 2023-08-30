@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useDeleteTaskMutation, useEditTaskMutation } from "../../store/api";
 import { useDispatch, useSelector } from "react-redux";
 import { removeSingleTask, editingTask } from "../../store/taskReducer";
+import { setErrorMessage, setSuccessMessage } from "../../store/taskReducer";
 
 export default function Tasks({item}){
     // const {item } = props;
@@ -16,7 +17,10 @@ export default function Tasks({item}){
         deleteTask(id)
         .then((res)=>{
             dispatch(removeSingleTask(id))
+            dispatch(setSuccessMessage(`Task was deleted!!!`))
         })
+        .catch((error)=>
+            dispatch(setErrorMessage('Task did not deleted...')))
     }
 
 

@@ -1,30 +1,14 @@
-import aboutlogo from "../../images/about_us.jpg"
+import aboutlogo from "../../images/about_us..png"
 import "../About/About.css"
 import { useState } from "react"
 
 export default function About(){
-    let [count, setCount] = useState(0);
-    
-    function handleIncrease() {
-        setCount(count+=1)
-    }
-
-    function handleDecrease(){
-        setCount(count-=1)
-    }
-
-
-    return <>
-        <div>
-            <div>{count}</div>
-            <button onClick={handleIncrease}>Increase</button>
-            <button onClick={handleDecrease}>Decrease</button>
-        </div>
-        <h1>About Us</h1>
+      return <>
+        <h2>About Us</h2>
         <div className="background">
             <img src={aboutlogo} alt="about_image"></img>
         </div>
-        <h1> Info you have to know!!!</h1>
+        <h2> Info you have to know!!!</h2>
         <div className = "text">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident quisquam ex tempora delectus saepe iste
                 incidunt ducimus quas in voluptatem deleniti accusamus eum, atque voluptas pariatur quo accusantium architect
@@ -39,7 +23,5 @@ export default function About(){
                 Minus, nemo ea.
             </p>
         </div>
-        <hr></hr>
-
     </>
 }
