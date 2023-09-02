@@ -15,24 +15,24 @@
     border: 2px ridge #3D9A8B;
     border-radius: 10px;
     padding: 10px 20px;
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
     box-sizing: border-box;
 
   }
   
   label> h4{
     font-size: 20px;
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
     
   }
   
   label, label>*{
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
     text-align: center;
   }
   
   input, select{
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
     color:#123d5f;
     border-radius: 10px;
   }
@@ -60,12 +60,12 @@
     padding: 5px 10px;
     margin-bottom: 5px;
     box-sizing: border-box;
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
   }
     
   .importance>div, .importance>div>label{
     margin-right: 15px;
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
   }
   
   .date{
@@ -75,7 +75,7 @@
     padding: 5px 0px;
     box-sizing: border-box;
     margin-bottom: 10px;
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
   }
   
   .date>div{
@@ -83,7 +83,7 @@
     display: flex;
     justify-content: center;
     border: 1px solid #3D9A8B;
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
     border-radius: 10px;
     padding: 2px 5px;
     margin: 5px;
@@ -103,7 +103,7 @@
     width: 90px;
     border: 2px solid #3D9A8B;
     color: #123d5f;
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
   }
   
   
@@ -111,7 +111,7 @@
     width: 80px;
     border: 2px solid #3D9A8B;
     color: #66dbf9;
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
   }
   
   .newtask{
@@ -133,14 +133,14 @@
     padding: 5px 0px;
     box-sizing: border-box;
     margin-bottom: 10px;
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
   }
   
   .footerBtns>button{
     border-radius: 15px;
     width: 80px;
     border: 2px solid #3D9A8B;
-    color: #37c0ae;
+    color: #f8d7d7;
     background-color: #123d5f;
     margin-top: 20px;
   }
@@ -156,7 +156,7 @@
     border: 5px ridge #3D9A8B;
     border-radius: 10px;
     padding: 15px 25px;
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
   }
   
   label>h4{
@@ -164,11 +164,11 @@
   }
   
   label, label>*{
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
   }
   
   input, select{
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
     color:#123d5f;
     border-radius: 10px;
   }
@@ -196,13 +196,13 @@
       padding: 5px 10px;
       margin-bottom: 5px;
       box-sizing: border-box;
-      background-color: #37c0ae;
+      background-color: #f8d7d7;
   
   }
   
   .importance>div, .importance>div>label{
     margin-right: 20px;
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
     
   }
   
@@ -213,13 +213,13 @@
     padding: 5px 0px;
     box-sizing: border-box;
     margin-bottom: 10px;
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
   }
   
   .date>div{
     display: flex;
     justify-content: center;
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
   
   }
   
@@ -237,7 +237,7 @@
     width: 100px;
     border: 2px solid #3D9A8B;
     color: #123d5f;
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
   }
   
   
@@ -245,7 +245,7 @@
     width: 110px;
     border: 2px solid #3D9A8B;
     color: #66dbf9;
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
     transition: 0.5s;
   }
   
@@ -267,7 +267,7 @@
     padding: 5px 0px;
     box-sizing: border-box;
     margin: 20px 0;
-    background-color: #37c0ae;
+    background-color: #f8d7d7;
   }
   
   .footerBtns>button{
@@ -290,21 +290,21 @@
       border: 5px ridge #3D9A8B;
       border-radius: 10px;
       padding: 15px 25px;
-      background-color: #37c0ae;
+      background-color: #f8d7d7;
       /* color: #3D9A8B; */
     }
 
     .Form, .Form > *{
-      background-color: #37c0ae;
+      background-color: #f8d7d7;
     }
 
     label, label>*{
-      background-color: #37c0ae;
+      background-color: #f8d7d7;
       text-align: left;
     }
     
     input, select{
-      background-color: #37c0ae;
+      background-color: #f8d7d7;
       color:#123d5f;
       border-radius: 10px;
     }
@@ -332,13 +332,13 @@
         padding: 5px 10px;
         margin-bottom: 5px;
         box-sizing: border-box;
-        background-color: #37c0ae;
+        background-color: #f8d7d7;
     
     }
     
     .importance>div, .importance>div>label{
       margin-right: 20px;
-      background-color: #37c0ae;
+      background-color: #f8d7d7;
       
     }
     
@@ -349,7 +349,7 @@
       padding: 5px 0px;
       box-sizing: border-box;
       margin-bottom: 10px;
-      background-color: #37c0ae;
+      background-color: #f8d7d7;
     }
   
     .date>div>input{
@@ -365,7 +365,7 @@
       width: 100px;
       border: 2px solid #3D9A8B;
       color: #123d5f;
-      background-color: #37c0ae;
+      background-color: #f8d7d7;
     }
     
     
@@ -373,7 +373,7 @@
       width: 110px;
       border: 2px solid #3D9A8B;
       color: #66dbf9;
-      background-color: #37c0ae;
+      background-color: #f8d7d7;
       transition: 0.5s;
     }
     
@@ -388,16 +388,16 @@
       padding: 5px 0px;
       box-sizing: border-box;
       margin-bottom: 10px;
-      background-color: #37c0ae;
+      background-color: #f8d7d7;
     }
     
     .footerBtns>button{
       border-radius: 15px;
       width: 110px;
       padding: 5px 0;
-      border: 2px solid #3D9A8B;
-      color: #37c0ae;
-      background-color: #123d5f;
+      border: 2px solid #dfda97;
+      color: #dfda97;
+      background-color: #4b6531;
     }
     
     }

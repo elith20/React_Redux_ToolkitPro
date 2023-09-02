@@ -1,3 +1,68 @@
+@media only screen and (max-width: 767px) {
+
+    .about{
+        background-color: #f8d7d7 ;
+        margin-top: 10px;
+    }
+    
+    .text p{
+        width: 100%;
+        padding: 10px;
+        background-color: transparent ;
+        color: #344716;
+        text-align: justify;
+        border-bottom: 1px solid #344716;
+        text-decoration: none;
+    }
+    
+    .about>h2 {
+        text-align: center;
+        font-size: 25px;
+        color: #344716;
+    }
+    
+    .background>img{
+        width: 100%;
+    }
+
+
+}
+  
+@media only screen and (min-width: 768px ) {
+
+    .about{
+        background-color: #f8d7d7 ;
+        margin-top: 10px;
+    }
+
+    .text{
+        display: flex;
+        justify-content:space-evenly;
+    }
+    
+    .text p{
+        width: 40%;
+        display: inline-block;
+        background-color: transparent ;
+        color: #344716;
+        text-align: justify;
+        text-decoration: none;
+    }
+    
+    .about>h2 {
+        text-align: center;
+        font-size: 30px;
+        color: #344716;
+    }
+    
+    .background>img{
+        width: 100%;
+    }
+
+}
+  
+@media only screen and (min-width: 1024px ) {
+
 .text{
     display: flex;
     justify-content:space-evenly;
@@ -10,10 +75,10 @@
     display: inline-block;
     background-color: transparent ;
     color: #344716;
-
+    text-decoration: none;
 }
 
-h2 {
+.about>h2 {
     text-align: center;
     font-size: 50px;
     color: #344716;
@@ -22,5 +87,5 @@ h2 {
 
 .background>img{
     width: 100%;
-    ;
+}
 }

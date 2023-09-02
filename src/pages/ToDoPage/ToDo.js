@@ -6,15 +6,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { getAllTasks } from "../../store/taskReducer";
 import { useEffect, useState} from "react";
 import { useGetTasksQuery } from "../../store/api";
+import './todo.css';
+import { useNavigate } from "react-router-dom";
 
 
 export default function ToDo(){
 
     const[showNewTaskModal, setShowNewTaskModal] = useState(false);
+    const {data, isError, isLoading} = useGetTasksQuery();
     const taskData = useSelector((state) => state.taskReducer.toDoList);
     const editTaskData = useSelector((state) => state.taskReducer.editTask);
     const dispatch = useDispatch();
-    const { data, } = useGetTasksQuery();
+    const navigate = useNavigate();
+
+    // const { data, } = useGetTasksQuery();
 
 
     useEffect(() => {
@@ -23,6 +28,13 @@ export default function ToDo(){
         }
     }, [data])
 
+    useEffect(()=>{
+        const token = localStorage.getItem('token');
+        if(!token){
+            navigate('/signin')
+        }
+    }, [])
+
     const toggleModal = () => {
         setShowNewTaskModal(!showNewTaskModal)
     }
@@ -30,19 +42,22 @@ export default function ToDo(){
     console.log('TTT===>>>', taskData);
 
     return(
-        <div >
-            <button     
-                onClick={() => toggleModal()}
-                style={{width: '200px', height: '50px', marginLeft: '45%', backgroundColor: '#f8d7d7', borderRadius: '5px', border: '2px solid #3D9A8B'}}>
-                Add New Task
-            </button>
-            <div>
-            {showNewTaskModal && 
-                <AddNewTask
-                    onClose = {toggleModal}                           
-                />}
+        <div className="todopage">
+            <div className="btnarea">
+                <button     
+                    onClick={() => toggleModal()}
+                    className="addbtn">
+                    Add New Task
+                </button>
             </div>
-            <div style={{display: 'flex', flexWrap: 'wrap'}}>
+            <div>
+                {showNewTaskModal && 
+                    <AddNewTask
+                        onClose = {toggleModal}                           
+                    />
+                }
+            </div>
+            <div className="display">
                 {taskData?.map((task) => {
                     return (
                         <div key={task.id}>

@@ -1,9 +1,9 @@
 import aboutlogo from "../../images/about_us..png"
 import "../About/About.css"
-import { useState } from "react"
+// import { useState } from "react"
 
 export default function About(){
-      return <>
+      return <div className="about">
         <h2>About Us</h2>
         <div className="background">
             <img src={aboutlogo} alt="about_image"></img>
@@ -23,5 +23,5 @@ export default function About(){
                 Minus, nemo ea.
             </p>
         </div>
-    </>
+    </div>
 }

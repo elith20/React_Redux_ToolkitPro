@@ -8,10 +8,10 @@ export const userApi = createApi({
     }),
     endpoints: (bulder) => ({
         registerNewUser: bulder.mutation({
-            query: ({ password }) => ({
+            query: ({ fullname, password }) => ({
                 url: '/register',
                 method: 'POST',
-                body: JSON.stringify({ email: "eve.holt@reqres.in", password }),
+                body: JSON.stringify({ email: "eve.holt@reqres.in", fullname, password }),
                 headers: {
                     'Content-type': 'application/json; charset=UTF-8',
                 },
@@ -28,8 +28,6 @@ export const userApi = createApi({
                 },
             })
         })
-
-
     })
 })
 

@@ -1,13 +1,10 @@
-.registr{
-    background-image:url(../../images/back.jpg);
-    background-size:cover;
-    padding: 50px 0;
-}
-
-
-
 @media only screen and (max-width: 767px) {
-
+    .registr{
+        background-image:url(../../images/back.jpg);
+        background-size:cover;
+        padding: 50px 0;
+    }
+    
     .main{
         width: 40%;
         margin: auto;
@@ -34,31 +31,16 @@
         border: none;
     }
     
-    .first_line{
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .first_input{
-        display: inline-block;
-        width: 40%;
-    }
-    
-    .second_input{
-        display: inline-block;
-        width: 40%;
-    }
-    
-    #name, #mail{
+    #email{
         width: 100%;
     }
     
-    #password, #confpassword{
+    #password{
         width: 100%;
     }
     
     #submit{
-        padding: 20px 40px;
+        padding: 15px 30px;
         background-color: #8eaba6;
         color: #ffffff;
         text-transform: uppercase;
@@ -74,11 +56,17 @@
         text-align: center;
         margin-top: 40px;
     }
-    
+
 
 }
   
 @media only screen and (min-width: 768px ) {
+    .registr{
+        background-image:url(../../images/back.jpg);
+        background-size:cover;
+        padding: 50px 0;
+    }
+    
     .main{
         width: 40%;
         margin: auto;
@@ -105,31 +93,16 @@
         border: none;
     }
     
-    .first_line{
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .first_input{
-        display: inline-block;
-        width: 40%;
-    }
-    
-    .second_input{
-        display: inline-block;
-        width: 40%;
-    }
-    
-    #name, #mail{
+    #email{
         width: 100%;
     }
     
-    #password, #confpassword{
+    #password{
         width: 100%;
     }
     
     #submit{
-        padding: 20px 40px;
+        padding: 15px 30px;
         background-color: #8eaba6;
         color: #ffffff;
         text-transform: uppercase;
@@ -145,11 +118,16 @@
         text-align: center;
         margin-top: 40px;
     }
-    
 
 }
   
 @media only screen and (min-width: 1024px ) {
+    .registr{
+        background-image:url(../../images/back.jpg);
+        background-size:cover;
+        padding: 50px 0;
+    }
+    
     .main{
         width: 40%;
         margin: auto;
@@ -176,31 +154,16 @@
         border: none;
     }
     
-    .first_line{
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .first_input{
-        display: inline-block;
-        width: 40%;
-    }
-    
-    .second_input{
-        display: inline-block;
-        width: 40%;
-    }
-    
-    #name, #mail{
+    #email{
         width: 100%;
     }
     
-    #password, #confpassword{
+    #password{
         width: 100%;
     }
     
     #submit{
-        padding: 20px 40px;
+        padding: 15px 30px;
         background-color: #8eaba6;
         color: #ffffff;
         text-transform: uppercase;
@@ -216,6 +179,5 @@
         text-align: center;
         margin-top: 40px;
     }
-    
 
 }

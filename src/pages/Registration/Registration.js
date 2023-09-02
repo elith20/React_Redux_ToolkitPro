@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './registr.css';
 import { useState } from "react";
+import { useRegisterNewUserMutation } from "../../store/userApi";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Registration(){
 
-    let [regData, setRegData] = useState(
+    const successAuthorization = useSelector((state) => state.userReducer.successAuthorization)
+    const [submitRegisterData,] = useRegisterNewUserMutation();
+    const navigate = useNavigate();
+    const [regData, setRegData] = useState(
         {
             fullname: '',
             email: '',
@@ -13,6 +19,14 @@ export default function Registration(){
         }
     ) 
 
+    const [passwordError, setPasswordError] = useState(false);
+
+    useEffect(()=>{
+        if(successAuthorization){
+            navigate('/')
+        }
+    }, [])
+
     const handleInputChanges = (e) =>{
         setRegData((prev) =>({
             ...prev,
@@ -20,16 +34,31 @@ export default function Registration(){
         }))       
     }
 
-    const handleSubmit = (e) =>{
+    const handleSubmitRegistr = (e) =>{
         e.preventDefault()
         console.log(regData)
-        regData = {
-            fullname: '',
-            email: '',
-            password: '',
-            confPassword: '',
-        }
+        const{fullname, email, password, confPassword} = regData;
         console.log(regData)
+
+        // if (!fullname || !email || !password || !confPassword) {
+        //     return;
+        // }
+        
+        if (password !== confPassword) {
+            setPasswordError(true);
+            return;
+        } else {
+            setPasswordError(false)
+        }
+
+        submitRegisterData({fullname, email, password})
+        .then((res)=>{
+            if (res.error) throw new Error('Registration field !!!');
+            if (res.data.token) {
+                navigate('/todo')
+            }
+        })
+        .catch((err) => console.log(err))        
     }
     
 
@@ -88,7 +117,7 @@ export default function Registration(){
                             type="submit" 
                             value="Submit" 
                             id="submit"
-                            onClick={handleSubmit}/>
+                            onClick={handleSubmitRegistr}/>
                     </div>
                 </form>
             </div>

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getToken } from "../../utils/utils";
+import { getToken } from "../utils/utils";
 
 
 const initialState = {

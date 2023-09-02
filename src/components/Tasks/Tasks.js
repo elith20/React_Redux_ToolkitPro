@@ -44,11 +44,11 @@ export default function Tasks({item}){
             </div>
             <div>
                 <p>Start date:</p>
-                {item.startdate}
+                {item.startDate}
             </div>
             <div>
                 <p >End date: </p>
-                {item.enddate}
+                {item.endDate}
             </div>
             <div>
                 <p>Developer: </p>

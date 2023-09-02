@@ -1,0 +1,43 @@
+.addbtn{
+    width: 200px;
+    height: 50px;
+    background-color: #f8d7d7;
+    border-radius: 5px;
+    border: 2px solid #3D9A8B
+}
+
+.btnarea{
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+
+    .display{
+        width: 100%;
+        text-align: center;
+    }
+
+}
+  
+@media only screen and (min-width: 768px ) {
+
+    .display{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+  
+@media only screen and (min-width: 1024px ) {
+
+    .display{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+    }
+}
