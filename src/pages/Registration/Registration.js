@@ -65,7 +65,7 @@ export default function Registration(){
 
     return (
         <div className="registr">
-            <div className="main">
+            <div className="registerArea">
                 <h2>Registration</h2>
                 <form>
                     <div className="first_line">

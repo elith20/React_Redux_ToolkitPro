@@ -53,7 +53,7 @@ export default function Login(){
     
     return (
         <div className="registr">
-            <div className="main">
+            <div className="loginarea">
                 <h2>Login</h2>
                 <form>
                     <div>

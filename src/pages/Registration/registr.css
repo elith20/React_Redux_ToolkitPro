@@ -8,45 +8,28 @@
 
 @media only screen and (max-width: 767px) {
 
-    .main{
-        width: 40%;
+    .registerArea{
+        width: 90%;
         margin: auto;
-        padding: 40px 80px;
         background-color: #f8d7d7;
         border-radius: 5%;
     }
     
-    label{
+    .registerArea label{
         background-color: transparent;
     }
     
-    h2{
+    .registerArea h2{
         text-transform: uppercase;
         margin-bottom: 20px;
-        text-align: center;
-        
+        text-align: center;   
     }
     
-    input{
+    .registerArea input{
         background-color: #f2f2f2;
         padding: 10px;
         margin: 10px 0 20px;
         border: none;
-    }
-    
-    .first_line{
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .first_input{
-        display: inline-block;
-        width: 40%;
-    }
-    
-    .second_input{
-        display: inline-block;
-        width: 40%;
     }
     
     #name, #mail{
@@ -67,22 +50,14 @@
     .button{
         width: 100%;
         text-align: center;
-    }
-    
-    .contact{
-        color: #ffffff;
-        text-align: center;
-        margin-top: 40px;
-    }
-    
-
+    }  
 }
   
 @media only screen and (min-width: 768px ) {
-    .main{
-        width: 40%;
+    .registerArea{
+        width: 60%;
         margin: auto;
-        padding: 40px 80px;
+        padding: 20px 40px;
         background-color: #f8d7d7;
         border-radius: 5%;
     }
@@ -139,18 +114,10 @@
         width: 100%;
         text-align: center;
     }
-    
-    .contact{
-        color: #ffffff;
-        text-align: center;
-        margin-top: 40px;
-    }
-    
-
 }
   
 @media only screen and (min-width: 1024px ) {
-    .main{
+    .registerArea{
         width: 40%;
         margin: auto;
         padding: 40px 80px;
@@ -210,12 +177,4 @@
         width: 100%;
         text-align: center;
     }
-    
-    .contact{
-        color: #ffffff;
-        text-align: center;
-        margin-top: 40px;
-    }
-    
-
 }

@@ -1,44 +1,39 @@
 @media only screen and (max-width: 767px) {
     .registr{
-        background-image:url(../../images/back.jpg);
-        background-size:cover;
-        padding: 50px 0;
+        width: 100%;
+        background-image: none;
+        background-color: #f8d7d7;
     }
     
-    .main{
-        width: 40%;
+    .loginarea{
+        width: 90%;
         margin: auto;
-        padding: 40px 80px;
         background-color: #f8d7d7;
         border-radius: 5%;
     }
     
-    label{
+    .registr label{
         background-color: transparent;
+        width: 100%;
     }
     
-    h2{
+    .registr h2{
         text-transform: uppercase;
         margin-bottom: 20px;
-        text-align: center;
-        
+        text-align: center;  
     }
     
-    input{
+    .registr input{
         background-color: #f2f2f2;
         padding: 10px;
         margin: 10px 0 20px;
         border: none;
     }
     
-    #email{
+    #email, #password{
         width: 100%;
     }
-    
-    #password{
-        width: 100%;
-    }
-    
+
     #submit{
         padding: 15px 30px;
         background-color: #8eaba6;
@@ -50,14 +45,6 @@
         width: 100%;
         text-align: center;
     }
-    
-    .contact{
-        color: #ffffff;
-        text-align: center;
-        margin-top: 40px;
-    }
-
-
 }
   
 @media only screen and (min-width: 768px ) {
@@ -67,37 +54,32 @@
         padding: 50px 0;
     }
     
-    .main{
-        width: 40%;
+    .loginarea{
+        width: 60%;
         margin: auto;
-        padding: 40px 80px;
+        padding: 20px 40px;
         background-color: #f8d7d7;
         border-radius: 5%;
     }
     
-    label{
+    .registr label{
         background-color: transparent;
     }
     
-    h2{
+    .registr h2{
         text-transform: uppercase;
         margin-bottom: 20px;
         text-align: center;
-        
     }
     
-    input{
+    .registr input{
         background-color: #f2f2f2;
         padding: 10px;
         margin: 10px 0 20px;
         border: none;
     }
     
-    #email{
-        width: 100%;
-    }
-    
-    #password{
+    #email, #password{
         width: 100%;
     }
     
@@ -112,13 +94,6 @@
         width: 100%;
         text-align: center;
     }
-    
-    .contact{
-        color: #ffffff;
-        text-align: center;
-        margin-top: 40px;
-    }
-
 }
   
 @media only screen and (min-width: 1024px ) {
